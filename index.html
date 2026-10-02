@@ -35,10 +35,10 @@
             min-height: 90px;
             display: flex;
             align-items: center;
-            justify-content: space-between;
             padding: 0 8%;
             border-bottom: 1px solid #1d2c3d;
             background: #081524;
+            position: relative;
         }
 
         .logo {
@@ -49,7 +49,10 @@
 
         .nav-links {
             display: flex;
-            gap: 40px;
+            gap: 45px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
         .nav-links a {
@@ -64,7 +67,7 @@
             color: #8dbcf0;
         }
 
-        /* HERO */
+        /* HERO / ABOUT */
 
         .hero {
             min-height: 730px;
@@ -353,7 +356,7 @@
         }
 
         .email-button:hover {
-            background: white;
+            background: #ffffff;
             transform: translateY(-2px);
         }
 
@@ -366,12 +369,6 @@
             background: #162b42;
             border-color: #8dbcf0;
             transform: translateY(-2px);
-        }
-
-        .contact-email {
-            color: #8dbcf0;
-            margin-top: 30px;
-            font-size: 14px;
         }
 
         /* FOOTER */
@@ -423,6 +420,8 @@
             }
 
             .nav-links {
+                position: static;
+                transform: none;
                 gap: 18px;
                 flex-wrap: wrap;
                 justify-content: center;
@@ -461,18 +460,20 @@
     <!-- NAVIGATION -->
 
     <nav>
-        <a href="#" class="logo">UMESH BHARANI</a>
+        <a href="#about" class="logo">UMESH BHARANI</a>
 
         <div class="nav-links">
+            <a href="#about">ABOUT</a>
             <a href="#skills">SKILLS</a>
             <a href="#projects">PROJECTS</a>
             <a href="#contact">CONTACT</a>
         </div>
     </nav>
 
-    <!-- HERO -->
+    <!-- ABOUT / HERO -->
 
-    <header class="hero">
+    <header class="hero" id="about">
+
         <div class="hero-container">
 
             <div class="hero-content">
@@ -516,15 +517,19 @@
                     </a>
 
                 </div>
+
             </div>
 
             <div class="profile-wrapper">
+
                 <img src="profilepicture.png"
                      alt="Umesh Bharani"
                      class="profile-picture">
+
             </div>
 
         </div>
+
     </header>
 
     <!-- SKILLS -->
@@ -533,7 +538,9 @@
 
         <div class="section-container">
 
-            <p class="section-label">CORE COMPETENCIES</p>
+            <p class="section-label">
+                CORE COMPETENCIES
+            </p>
 
             <h2 class="section-title">
                 Skills &amp; Expertise
@@ -606,7 +613,9 @@
                 </div>
 
             </div>
+
         </div>
+
     </section>
 
     <!-- PROJECTS -->
@@ -615,9 +624,13 @@
 
         <div class="section-container">
 
-            <p class="section-label">FEATURED WORK</p>
+            <p class="section-label">
+                FEATURED WORK
+            </p>
 
-            <h2 class="section-title">Projects</h2>
+            <h2 class="section-title">
+                Projects
+            </h2>
 
             <div class="projects-grid">
 
@@ -678,7 +691,9 @@
                 </div>
 
             </div>
+
         </div>
+
     </section>
 
     <!-- CONTACT -->
@@ -691,7 +706,9 @@
                 CONNECT &amp; NETWORK
             </p>
 
-            <h2>Get In Touch</h2>
+            <h2>
+                Get In Touch
+            </h2>
 
             <p class="contact-description">
                 Interested in connecting or learning more about my
@@ -721,9 +738,8 @@
 
             </div>
 
-           
-
         </div>
+
     </section>
 
     <!-- FOOTER -->
