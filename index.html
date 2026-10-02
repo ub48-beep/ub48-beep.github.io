@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <title>Umesh Bharani | Finance & Business Analytics</title>
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -24,7 +26,10 @@
             line-height: 1.6;
         }
 
-        /* NAVIGATION */
+
+        /* =========================
+           NAVIGATION
+        ========================= */
 
         nav {
             width: 100%;
@@ -39,7 +44,7 @@
         .logo {
             font-size: 24px;
             font-weight: 700;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
         }
 
         .nav-links {
@@ -50,21 +55,25 @@
         .nav-links a {
             color: #cbd5e1;
             text-decoration: none;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 600;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
             text-transform: uppercase;
+            transition: 0.2s;
         }
 
         .nav-links a:hover {
             color: #ffffff;
         }
 
-        /* HERO */
+
+        /* =========================
+           HERO
+        ========================= */
 
         .hero {
-            min-height: 620px;
-            padding: 90px 8%;
+            min-height: 700px;
+            padding: 85px 8%;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -74,7 +83,8 @@
         }
 
         .hero-content {
-            max-width: 700px;
+            max-width: 760px;
+            flex: 1;
         }
 
         .eyebrow {
@@ -83,32 +93,51 @@
             letter-spacing: 3px;
             font-size: 13px;
             font-weight: 700;
-            margin-bottom: 18px;
+            margin-bottom: 15px;
         }
 
         .hero h1 {
-            font-size: 64px;
+            font-size: 62px;
             line-height: 1.05;
-            margin-bottom: 18px;
             letter-spacing: -2px;
+            margin-bottom: 15px;
         }
 
         .hero-subtitle {
             color: #aab9ca;
-            font-size: 21px;
+            font-size: 20px;
             margin-bottom: 30px;
         }
 
-        .statement {
+
+        /* PERSONAL STATEMENT BOX */
+
+        .statement-box {
             background: #111e2e;
             border: 1px solid #20344b;
-            border-left: 4px solid #7ea6d8;
-            padding: 24px 26px;
-            border-radius: 8px;
-            color: #dbe5ef;
-            font-size: 17px;
-            margin-bottom: 30px;
+            border-radius: 14px;
+            padding: 28px 30px;
+            margin: 30px 0;
+            max-width: 730px;
         }
+
+        .statement-label {
+            color: #7ea6d8;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2.5px;
+            margin-bottom: 12px;
+        }
+
+        .statement-text {
+            color: #e1e8f0;
+            font-size: 18px;
+            line-height: 1.75;
+            font-style: italic;
+        }
+
+
+        /* HERO BUTTONS */
 
         .buttons {
             display: flex;
@@ -118,11 +147,12 @@
 
         .button {
             display: inline-block;
-            padding: 13px 22px;
-            border-radius: 6px;
+            padding: 13px 23px;
+            border-radius: 7px;
             text-decoration: none;
             font-weight: 700;
-            font-size: 14px;
+            font-size: 13px;
+            letter-spacing: 0.4px;
             transition: 0.2s;
         }
 
@@ -133,6 +163,7 @@
 
         .primary-button:hover {
             background: #ffffff;
+            transform: translateY(-2px);
         }
 
         .secondary-button {
@@ -142,12 +173,19 @@
 
         .secondary-button:hover {
             background: #142338;
+            transform: translateY(-2px);
         }
 
-        /* PROFILE PHOTO */
+
+        /* =========================
+           PROFILE PHOTO
+        ========================= */
 
         .photo-container {
             flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .profile-picture {
@@ -156,12 +194,17 @@
             object-fit: cover;
             border-radius: 50%;
             border: 5px solid #d9e7f7;
+            outline: 2px solid #49627d;
+            outline-offset: 8px;
             box-shadow: 0 20px 50px rgba(0,0,0,0.35);
         }
 
-        /* GENERAL SECTIONS */
 
-        section.content-section {
+        /* =========================
+           GENERAL SECTIONS
+        ========================= */
+
+        .content-section {
             padding: 90px 8%;
         }
 
@@ -184,7 +227,10 @@
             margin-bottom: 45px;
         }
 
-        /* SKILLS */
+
+        /* =========================
+           SKILLS
+        ========================= */
 
         #skills {
             background: #101b2a;
@@ -200,8 +246,9 @@
             background: #142338;
             border: 1px solid #20344b;
             border-radius: 10px;
-            padding: 26px 22px;
-            transition: transform 0.2s, border-color 0.2s;
+            padding: 27px 22px;
+            min-height: 145px;
+            transition: 0.2s;
         }
 
         .skill-card:hover {
@@ -211,7 +258,7 @@
 
         .skill-card h3 {
             font-size: 17px;
-            margin-bottom: 8px;
+            margin-bottom: 9px;
         }
 
         .skill-card p {
@@ -219,7 +266,10 @@
             font-size: 14px;
         }
 
-        /* PROJECTS */
+
+        /* =========================
+           PROJECTS
+        ========================= */
 
         #projects {
             background: #0b1421;
@@ -236,7 +286,7 @@
             border: 1px solid #20344b;
             border-radius: 12px;
             overflow: hidden;
-            transition: transform 0.2s, border-color 0.2s;
+            transition: 0.2s;
         }
 
         .project-card:hover {
@@ -245,7 +295,7 @@
         }
 
         .project-top {
-            height: 8px;
+            height: 7px;
             background: #7ea6d8;
         }
 
@@ -269,7 +319,8 @@
         .project-card p {
             color: #aab9ca;
             margin-bottom: 25px;
-            min-height: 80px;
+            min-height: 105px;
+            font-size: 16px;
         }
 
         .project-link {
@@ -279,26 +330,17 @@
             font-weight: 700;
             border-bottom: 1px solid #7ea6d8;
             padding-bottom: 3px;
+            transition: 0.2s;
         }
 
         .project-link:hover {
             color: #9ec3ef;
         }
 
-        /* ABOUT */
 
-        #about {
-            background: #101b2a;
-        }
-
-        .about-text {
-            max-width: 850px;
-            color: #bdc9d6;
-            font-size: 18px;
-            line-height: 1.8;
-        }
-
-        /* FOOTER */
+        /* =========================
+           FOOTER
+        ========================= */
 
         footer {
             background: #08111c;
@@ -309,16 +351,36 @@
             font-size: 14px;
         }
 
-        /* MOBILE */
 
-        @media (max-width: 900px) {
+        /* =========================
+           RESPONSIVE DESIGN
+        ========================= */
+
+        @media (max-width: 1000px) {
+
+            .hero {
+                gap: 45px;
+            }
+
+            .hero h1 {
+                font-size: 52px;
+            }
+
+            .profile-picture {
+                width: 260px;
+                height: 260px;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+
+        @media (max-width: 800px) {
 
             nav {
                 padding: 20px 6%;
-            }
-
-            .nav-links {
-                gap: 16px;
             }
 
             .hero {
@@ -327,8 +389,8 @@
                 padding: 60px 6%;
             }
 
-            .hero h1 {
-                font-size: 46px;
+            .hero-content {
+                max-width: 700px;
             }
 
             .buttons {
@@ -340,23 +402,29 @@
                 height: 220px;
             }
 
-            .skills-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
             .projects-grid {
                 grid-template-columns: 1fr;
             }
+
+            .project-card p {
+                min-height: auto;
+            }
         }
+
 
         @media (max-width: 550px) {
 
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
             .logo {
-                font-size: 18px;
+                font-size: 19px;
             }
 
             .nav-links {
-                gap: 10px;
+                gap: 20px;
             }
 
             .nav-links a {
@@ -364,37 +432,59 @@
             }
 
             .hero h1 {
-                font-size: 38px;
+                font-size: 40px;
+            }
+
+            .hero-subtitle {
+                font-size: 17px;
+            }
+
+            .statement-text {
+                font-size: 16px;
             }
 
             .skills-grid {
                 grid-template-columns: 1fr;
             }
 
-            section.content-section {
+            .content-section {
                 padding: 65px 6%;
+            }
+
+            .section-title {
+                font-size: 32px;
             }
         }
 
     </style>
 </head>
 
+
 <body>
 
-    <!-- NAVIGATION -->
+
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
 
     <nav>
-        <div class="logo">UMESH BHARANI</div>
+
+        <div class="logo">
+            UMESH BHARANI
+        </div>
 
         <div class="nav-links">
-            <a href="#about">About</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
         </div>
+
     </nav>
 
 
-    <!-- HERO -->
+
+    <!-- =========================
+         HERO
+    ========================= -->
 
     <header class="hero">
 
@@ -404,37 +494,56 @@
                 Finance • Business Analytics • Technology
             </p>
 
-            <h1>Umesh Bharani</h1>
+            <h1>
+                Umesh Bharani
+            </h1>
 
             <p class="hero-subtitle">
-                Finance & Business Analytics Student at Rutgers Business School
+                Finance &amp; Business Analytics Student
+                at Rutgers Business School
             </p>
 
-            <div class="statement">
-                I am a Rutgers Business School student majoring in Finance
-                and Business Analytics &amp; Information Technology, with a
-                strong interest in investment banking, financial analysis,
-                and technology.
+
+            <!-- PERSONAL STATEMENT -->
+
+            <div class="statement-box">
+
+                <p class="statement-label">
+                    PERSONAL STATEMENT
+                </p>
+
+                <p class="statement-text">
+                    "I am a Rutgers Business School student majoring
+                    in Finance and Business Analytics &amp; Information
+                    Technology, with a strong interest in investment
+                    banking, financial analysis, and technology."
+                </p>
+
             </div>
+
+
+            <!-- BUTTONS -->
 
             <div class="buttons">
 
                 <a href="#projects"
                    class="button primary-button">
-                    View My Projects
+                    VIEW MY PROJECTS
                 </a>
 
                 <a href="https://github.com/ub48-beep"
                    target="_blank"
                    rel="noopener noreferrer"
                    class="button secondary-button">
-                    GitHub Profile
+                    GITHUB PROFILE
                 </a>
 
             </div>
 
         </div>
 
+
+        <!-- PROFILE PHOTO -->
 
         <div class="photo-container">
 
@@ -447,82 +556,122 @@
     </header>
 
 
-    <!-- SKILLS -->
+
+    <!-- =========================
+         SKILLS
+    ========================= -->
 
     <section id="skills" class="content-section">
 
         <div class="section-inner">
 
-            <p class="section-label">Core Competencies</p>
+            <p class="section-label">
+                Core Competencies
+            </p>
 
-            <h2 class="section-title">Skills & Expertise</h2>
+            <h2 class="section-title">
+                Skills &amp; Expertise
+            </h2>
 
 
             <div class="skills-grid">
 
+
                 <div class="skill-card">
+
                     <h3>Python</h3>
+
                     <p>
                         Programming, data manipulation,
                         conditional logic, and analysis.
                     </p>
+
                 </div>
 
+
                 <div class="skill-card">
-                    <h3>SQL & MySQL</h3>
+
+                    <h3>SQL &amp; MySQL</h3>
+
                     <p>
                         Relational databases, queries,
                         keys, and database management.
                     </p>
+
                 </div>
 
+
                 <div class="skill-card">
+
                     <h3>Database Design</h3>
+
                     <p>
                         ER diagrams, table relationships,
                         normalization, and MySQL Workbench.
                     </p>
+
                 </div>
 
+
                 <div class="skill-card">
+
                     <h3>Microsoft Excel</h3>
+
                     <p>
                         Financial analysis, organization,
                         calculations, and data analysis.
                     </p>
+
                 </div>
 
+
                 <div class="skill-card">
+
                     <h3>Financial Analysis</h3>
+
                     <p>
                         Company analysis, investment
                         evaluation, and financial metrics.
                     </p>
+
                 </div>
 
+
                 <div class="skill-card">
+
                     <h3>Financial Modeling</h3>
+
                     <p>
                         Valuation concepts and analysis
                         of companies and investments.
                     </p>
+
                 </div>
 
+
                 <div class="skill-card">
+
                     <h3>Data Analysis</h3>
+
                     <p>
                         Interpreting quantitative data
                         and communicating key findings.
                     </p>
+
                 </div>
 
+
                 <div class="skill-card">
+
                     <h3>Business Analytics</h3>
+
                     <p>
                         Applying technology and data
                         to support business decisions.
                     </p>
+
                 </div>
+
 
             </div>
 
@@ -531,18 +680,26 @@
     </section>
 
 
-    <!-- PROJECTS -->
+
+    <!-- =========================
+         PROJECTS
+    ========================= -->
 
     <section id="projects" class="content-section">
 
         <div class="section-inner">
 
-            <p class="section-label">Featured Work</p>
+            <p class="section-label">
+                Featured Work
+            </p>
 
-            <h2 class="section-title">Projects</h2>
+            <h2 class="section-title">
+                Projects
+            </h2>
 
 
             <div class="projects-grid">
+
 
                 <!-- PROJECT 1 -->
 
@@ -556,13 +713,16 @@
                             Python • Finance
                         </span>
 
-                        <h3>Stock Portfolio Analyzer</h3>
+                        <h3>
+                            Stock Portfolio Analyzer
+                        </h3>
 
                         <p>
-                            A Python application that calculates investment
-                            returns, portfolio allocation, and overall
-                            portfolio performance. The project demonstrates
-                            Python programming and financial analysis.
+                            A Python application that calculates
+                            investment returns, portfolio allocation,
+                            and overall portfolio performance.
+                            This project demonstrates Python
+                            programming and financial analysis.
                         </p>
 
                         <a href="https://github.com/ub48-beep/stock-portfolio-analyzer"
@@ -577,6 +737,7 @@
                 </div>
 
 
+
                 <!-- PROJECT 2 -->
 
                 <div class="project-card">
@@ -589,13 +750,16 @@
                             SQL • Database Design
                         </span>
 
-                        <h3>Employee Parking Database</h3>
+                        <h3>
+                            Employee Parking Database
+                        </h3>
 
                         <p>
-                            A relational MySQL database designed to manage
-                            employees, parking permissions, parking lots,
-                            and vehicle information using primary keys,
-                            foreign keys, relationships, and SQL queries.
+                            A relational MySQL database designed
+                            to manage employees, parking permissions,
+                            parking lots, and vehicle information
+                            using primary keys, foreign keys,
+                            relationships, and SQL queries.
                         </p>
 
                         <a href="https://github.com/ub48-beep/employee-parking-database"
@@ -609,6 +773,7 @@
 
                 </div>
 
+
             </div>
 
         </div>
@@ -616,34 +781,10 @@
     </section>
 
 
-    <!-- ABOUT -->
 
-    <section id="about" class="content-section">
-
-        <div class="section-inner">
-
-            <p class="section-label">About Me</p>
-
-            <h2 class="section-title">
-                Finance Meets Technology
-            </h2>
-
-            <p class="about-text">
-                I am a student at Rutgers Business School studying Finance
-                and Business Analytics &amp; Information Technology. My
-                interests sit at the intersection of finance, data, and
-                technology, with particular interest in investment banking
-                and financial analysis. Through coursework and projects,
-                I have developed experience with Python, SQL, database
-                design, Excel, and financial analysis.
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- FOOTER -->
+    <!-- =========================
+         FOOTER
+    ========================= -->
 
     <footer>
 
@@ -653,5 +794,7 @@
 
     </footer>
 
+
 </body>
+
 </html>
